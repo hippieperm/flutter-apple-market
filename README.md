@@ -46,6 +46,7 @@ Flutter와 Provider를 이용해 **중고거래 마켓 앱(사과마켓/당근�
 ---
 
 ## 🗂 폴더 구조
+<<<<<<< HEAD
 flutter-apple-market/
 ├── assets/
 │   ├── data/
@@ -67,6 +68,30 @@ flutter-apple-market/
 │   └── main.dart                # 앱 진입점
 │
 ├── pubspec.yaml                 # 의존성 및 에셋 설정
+=======
+
+flutter-apple-market/
+├── assets/
+│ ├── data/
+│ │ └── products.csv # 상품 더미 데이터
+│ └── images/ # 상품 이미지 (sample1.png ~ sample10.png)
+│
+├── lib/
+│ ├── models/
+│ │ └── product.dart # Product 데이터 모델
+│ ├── repositories/
+│ │ └── product_repository.dart # CSV 로드/리포지토리
+│ ├── viewmodels/
+│ │ └── product_provider.dart # Provider 상태 관리
+│ ├── views/
+│ │ ├── product_list_page.dart # 메인 상품 목록 화면
+│ │ └── product_detail_page.dart # 상품 상세 화면
+│ ├── widgets/
+│ │ └── product_tile.dart # 공용 상품 리스트 타일 위젯
+│ └── main.dart # 앱 진입점
+│
+├── pubspec.yaml # 의존성 및 에셋 설정
+>>>>>>> 9b82945 (README.md 파일의 폴더 구조를 개선하여 프로젝트의 디렉토리 및 파일 구성에 대한 명확한 설명을 추가함. 각 폴더와 파일의 역할을 상세히 기술하여 이해도를 높임.)
 ├── pubspec.lock
 ├── README.md
 └── test/
