@@ -42,7 +42,7 @@ class ProductRepository {
           id: parseInt(row[0]),
           imageFile: normalizeImage(row[1]),
           title: row[2].toString().trim(),
-          description: row[3].toString().trim(),
+          description: row[3].toString().replaceAll(r'\n', ' ').trim(),
           seller: row[4].toString().trim(),
           price: parseInt(row[5]),
           address: row[6].toString().trim(),
