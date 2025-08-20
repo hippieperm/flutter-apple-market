@@ -103,31 +103,33 @@ class ProductDetailPage extends StatelessWidget {
               ],
             ),
           ),
-          bottomNavigationBar: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            height: 70,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border(top: BorderSide(color: Colors.grey.shade300)),
-            ),
-            child: Row(
-              children: [
-                Text(_price(p.price),
-                    style: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.bold)),
-                const Spacer(),
-                SizedBox(
-                  height: 44,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
+          bottomNavigationBar: SafeArea(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              height: 70,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border(top: BorderSide(color: Colors.grey.shade300)),
+              ),
+              child: Row(
+                children: [
+                  Text(_price(p.price),
+                      style: const TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.bold)),
+                  const Spacer(),
+                  SizedBox(
+                    height: 44,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                      ),
+                      child: const Text('채팅하기'),
                     ),
-                    child: const Text('채팅하기'),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         );
