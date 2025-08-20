@@ -28,10 +28,19 @@ class ProductRepository {
         return int.tryParse(s) ?? 0;
       }
 
+      String normalizeImage(dynamic v) {
+        var img = v.toString().trim();
+        // 경로만/파일명만 와도 처리. 확장자 없으면 png로 가정
+        if (!img.contains('.')) img = '$img.png';
+        // 혹시 assets/까지 들어온 값이면 파일명만 추출
+        img = img.split('/').last;
+        return img;
+      }
+
       items.add(
         Product(
           id: parseInt(row[0]),
-          imageFile: row[1].toString().trim(),
+          imageFile: normalizeImage(row[1]),
           title: row[2].toString().trim(),
           description: row[3].toString().trim(),
           seller: row[4].toString().trim(),
