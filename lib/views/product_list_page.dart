@@ -79,6 +79,7 @@ class _ProductListPageState extends State<ProductListPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('르탄동'),
+        centerTitle: false,
         actions: [
           IconButton(
               onPressed: _onBell, icon: const Icon(Icons.notifications_none))
