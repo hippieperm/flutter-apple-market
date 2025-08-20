@@ -147,50 +147,52 @@ class ProductDetailPage extends StatelessWidget {
           ),
 
           // 4) 하단 고정 바 (좌 하트 / 가운데 가격 / 우 채팅 버튼)
-          bottomNavigationBar: Container(
-            height: 74,
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border(top: BorderSide(color: Colors.grey.shade300)),
-            ),
-            child: Row(
-              children: [
-                // 하트 토글
-                IconButton(
-                  onPressed: () => vm.toggleLike(p.id),
-                  icon: Icon(
-                    p.liked ? Icons.favorite : Icons.favorite_border,
-                    color: p.liked ? Colors.red : Colors.grey.shade700,
-                  ),
-                ),
-                // 가운데 가격 (가운데 정렬 느낌 나도록 Expanded 사용)
-                Expanded(
-                  child: Center(
-                    child: Text(
-                      _price(p.price),
-                      style: const TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.w800),
+          bottomNavigationBar: SafeArea(
+            child: Container(
+              height: 74,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border(top: BorderSide(color: Colors.grey.shade300)),
+              ),
+              child: Row(
+                children: [
+                  // 하트 토글
+                  IconButton(
+                    onPressed: () => vm.toggleLike(p.id),
+                    icon: Icon(
+                      p.liked ? Icons.favorite : Icons.favorite_border,
+                      color: p.liked ? Colors.red : Colors.grey.shade700,
                     ),
                   ),
-                ),
-                // 채팅 버튼
-                SizedBox(
-                  height: 46,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFFF8A3D),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(horizontal: 18),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(14),
+                  // 가운데 가격 (가운데 정렬 느낌 나도록 Expanded 사용)
+                  Expanded(
+                    child: Center(
+                      child: Text(
+                        _price(p.price),
+                        style: const TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w800),
                       ),
                     ),
-                    child: const Text('채팅하기'),
                   ),
-                ),
-              ],
+                  // 채팅 버튼
+                  SizedBox(
+                    height: 46,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFFF8A3D),
+                        foregroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(horizontal: 18),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14),
+                        ),
+                      ),
+                      child: const Text('채팅하기'),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         );
