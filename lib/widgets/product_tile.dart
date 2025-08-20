@@ -38,7 +38,7 @@ class ProductTile extends StatelessWidget {
             const SizedBox(width: 12),
             Expanded(
               child: SizedBox(
-                height: 90,
+                height: 96,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
