@@ -23,7 +23,6 @@ class AppleMarketApp extends StatelessWidget {
         title: 'Apple Market',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFFF8A3D)),
           useMaterial3: true,
         ),
         home: const ProductListPage(),
