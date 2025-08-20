@@ -87,7 +87,7 @@ class ProductDetailPage extends StatelessWidget {
                         ),
                         // 우측 매너온도
                         Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
                               '39.3 ℃',
@@ -99,11 +99,14 @@ class ProductDetailPage extends StatelessWidget {
                             const SizedBox(height: 6),
                             Column(
                               children: [
-                                Text('매너온도',
-                                    style: TextStyle(
-                                      color: Colors.grey.shade600,
-                                      fontSize: 12,
-                                    )),
+                                Text(
+                                  '매너온도',
+                                  style: TextStyle(
+                                    color: Colors.grey.shade600,
+                                    fontSize: 12,
+                                    height: 0,
+                                  ),
+                                ),
                                 Container(
                                   height: 0.4,
                                   width: 45,
