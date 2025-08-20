@@ -7,8 +7,8 @@ Flutter와 Provider를 이용해 **중고거래 마켓 앱(사과마켓/당근�
 
 ## 📱 스크린샷
 
-| 메인 화면 | 상품 상세 |
-|-----------|-----------|
+| 메인 화면                                | 상품 상세                                  |
+| ---------------------------------------- | ------------------------------------------ |
 | ![메인화면](assets/screenshots/main.png) | ![상세화면](assets/screenshots/detail.png) |
 
 ---
@@ -16,6 +16,7 @@ Flutter와 Provider를 이용해 **중고거래 마켓 앱(사과마켓/당근�
 ## ✨ 주요 기능
 
 ### 1. 상품 목록
+
 - CSV(`assets/data/products.csv`) 기반 **더미 데이터 로딩**
 - `ListView.separated`로 상품 리스트 구현
 - 이미지 **ClipRRect 라운드 처리**
@@ -25,12 +26,14 @@ Flutter와 Provider를 이용해 **중고거래 마켓 앱(사과마켓/당근�
 - 상단 종 아이콘 클릭 시 **SnackBar 알림**
 
 ### 2. 상품 상세
+
 - **Navigator.push**로 `id` 전달 → Provider에서 상품 데이터 조회
 - 상단 큰 이미지 / 판매자 카드 / 매너온도 UI
 - 제목/내용 표시 (`\n` 문자열 제거 처리)
 - 하단 고정 바 : 좌측 좋아요(하트), 중앙 가격, 우측 `채팅하기` 버튼
 
 ### 3. 추가 기능
+
 - **좋아요(♥) 토글**
   - 상세 → 목록까지 Provider로 상태 동기화
 - **롱클릭 시 상품 삭제**
@@ -43,3 +46,14 @@ Flutter와 Provider를 이용해 **중고거래 마켓 앱(사과마켓/당근�
 ---
 
 ## 🗂 폴더 구조
+
+lib/
+┣ models/ # 데이터 모델 (Product)
+┣ repositories/ # CSV 로드/리포지토리
+┣ viewmodels/ # Provider (ProductProvider)
+┣ views/ # 화면 (목록, 상세)
+┣ widgets/ # 공용 위젯 (ProductTile)
+┗ main.dart # 앱 진입점
+assets/
+┣ data/products.csv # 상품 더미 데이터
+┗ images/ # 상품 이미지
