@@ -46,7 +46,7 @@ Flutter와 Provider를 이용해 **중고거래 마켓 앱(사과마켓/당근�
 ---
 
 ## 🗂 폴더 구조
-'''
+~~~
 flutter-apple-market/
 ├── assets/
 │   ├── data/
@@ -71,4 +71,4 @@ flutter-apple-market/
 ├── pubspec.lock
 ├── README.md
 └── test/
-'''
+~~~
